@@ -8,7 +8,7 @@
 		<version>4.0.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.vinsguru</groupId>
+	<groupId>com.jane</groupId>
 	<artifactId>netflux</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -27,7 +27,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.vinsguru</groupId>
+				<groupId>com.jane</groupId>
 				<artifactId>netflux-events</artifactId>
 				<version>${project.version}</version>
 			</dependency>
