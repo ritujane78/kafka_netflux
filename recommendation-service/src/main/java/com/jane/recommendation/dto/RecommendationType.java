@@ -1,0 +1,8 @@
+package com.jane.recommendation.dto;
+
+public enum RecommendationType {
+
+    NEWLY_ADDED,
+    PERSONALIZED;
+
+}
