@@ -17,10 +17,23 @@ public class MovieApiTest {
 
     @Test
     public void movieDetails() {
+        testClient.get()
+                .uri("/api/movies/{id}", 1)
+                .exchange()
+                .expectStatus().is2xxSuccessful()
+                .expectBody()
+                .jsonPath("$.id").isEqualTo(1)
+                .jsonPath("$.title").isEqualTo("Inception")
+                .jsonPath("$.runtime").isEqualTo(150);
     }
 
     @Test
     public void movieNotFound() {
+        testClient.get()
+                .uri("/api/movies/{id}", 10)
+                .exchange()
+                .expectStatus().is4xxClientError();
     }
+
 
 }
