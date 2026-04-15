@@ -6,10 +6,15 @@ spring:
     defer-datasource-initialization: true
   cloud:
     function:
-      definition: ??
+      definition: movieAddedEventConsumer;customerGenreUpdatedEventConsumer
     stream:
       bindings:
-        ??
+        customerGenreUpdatedEventConsumer-in-0:
+          destination: customer-events
+          group: recommendation-service
+        movieAddedEventConsumer-in-0:
+          destination: movie-events
+          group: recommendation-service
       kafka:
         binder:
           brokers:

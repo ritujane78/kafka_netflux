@@ -7,6 +7,6 @@ CREATE TABLE customer (
 );
 
 INSERT INTO customer (name, favorite_genre) VALUES
-('Sam', 'Action'),
+('Ritu', 'Action'),
 ('Mike', 'Comedy'),
 ('John', 'Thriller');
