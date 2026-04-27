@@ -63,7 +63,7 @@ recommendations
 
 ------------------------------------------------------------------------
 
-## ⚙️ Running the Project
+## Running the Project
 
 ### 1. Start Kafka (Required)
 
@@ -81,13 +81,13 @@ Use the provided Docker setup:
 
 ------------------------------------------------------------------------
 
-### 3. Start Services (Important Order ⚠️)
+### 3. Start Services (Important Order)
 
 Start services in the following order:
 
-1.  **movie-service**
-2.  **customer-service**
-3.  **recommendation-service**
+1.  **movie-service** (port:7070)
+2.  **customer-service** (port:6060)
+3.  **recommendation-service** (port:8080)
 
 ```{=html}
 <!-- -->
@@ -113,6 +113,8 @@ A **static HTML file** is provided in the project.
 -   Can be used to test the recommendation flow
 -   Interacts with backend APIs
 -   Useful for quick manual testing without frontend setup
+
+    Access it at http://localhost:8080/ (After running all the services.)
 
 ------------------------------------------------------------------------
 
