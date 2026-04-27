@@ -28,7 +28,7 @@ public class EventConsumerConfig {
 
     private <T> Consumer<T> withLogging(Consumer<T> consumer){
         return t -> {
-            log.info("received: {}", consumer);
+            log.info("received: {}", t);
             consumer.accept(t);
         };
     }
